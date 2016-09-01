@@ -1,0 +1,94 @@
+/*!
+Theme Name: nastoletni.pl Theme
+Author: Albert221
+Author URI: http://albert221.net
+Text Domain: nastoletnitheme
+*/
+
+@import 'mixins';
+
+*, :before, :after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	background: #f3f3f3;
+	color: #333;
+	font: 16px Source Sans Pro, Arial, sans-serif;
+}
+
+a {
+	color: $primaryColor;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+.header a {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 15px;
+	background: $primaryColor url('imgs/header.jpg') center/cover;
+	color: #fff;
+	text-decoration: none;
+
+	@media (max-width: $mobileWidth) {
+		flex-direction: column-reverse;
+	}
+
+	h1 {
+		line-height: 68px;
+		font-size: 88px;
+
+		@media (max-width: $mobileWidth) {
+			line-height: 34px;
+			text-align: center;
+			font-size: 46px;
+		}
+	}
+
+	img {
+		height: 130px;
+
+		@media (min-width: $mobileWidth) {
+			height: 200px;
+			margin-right: 28px;
+		}
+	}
+}
+
+.codeline {
+	padding: 30px 0;
+	background: #333;
+	color: #fff;
+	font-family: Droid Sans Mono, monospace;
+
+	> div {
+		@extend %container;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		code {
+			word-break: break-all;
+		}
+
+		.fb-like {
+			@media (max-width: $mobileWidth) {
+				display: none;
+			}
+		}
+	}
+}

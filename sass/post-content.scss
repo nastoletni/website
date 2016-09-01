@@ -1,0 +1,87 @@
+@import 'mixins';
+
+#tinymce.wp-editor {
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		color: $primaryColor;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.posts article .content, #tinymce.wp-editor {
+	line-height: 1.5;
+
+	:not(:last-child):not(li) { 
+		margin-bottom: 15px;
+	}
+
+	.gist * {
+		margin-bottom: 0 !important;
+	}
+
+	ul, ol {
+		list-style-position: inside;
+	}
+
+	blockquote {
+		border-left: 5px solid #ccc;
+		padding-left: 15px;
+		color: #666;
+		font-style: italic;
+	}
+
+	code {
+		border: 1px solid lighten($primaryColor, 50%);
+		border-radius: 3px;
+		padding: 0 3px;
+		background: lighten($primaryColor, 60%);
+	}
+
+	.rules {
+		counter-reset: rules;
+		list-style: none;
+		text-align: left;
+
+		li {
+			position: relative;
+			padding: 10px 20px 10px 60px;
+			line-height: 20px;
+
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+
+			&:target {
+				background: #f3f3f3;
+
+				&:before {
+					background: #ee1d23;
+				}
+			}
+
+			&:before {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				content: counter(rules);
+				counter-increment: rules;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 40px;
+				height: 100%;
+				background: $primaryColor;
+				color: #fff;
+				line-height: 40px;
+			}
+		}
+	}
+}

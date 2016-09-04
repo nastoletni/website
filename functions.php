@@ -28,3 +28,21 @@ function nastoletnitheme_custom_login_logo() { ?>
 <?php }
 
 add_action( 'login_enqueue_scripts', 'nastoletnitheme_custom_login_logo' );
+
+function nastoletnitheme_custom_dashboard_widget_content() { ?>
+	<a href="http://nastoletni.pl/wytyczne-dla-autorow" style="font-weight: bold; font-size: 2em;">Przeczytaj zanim zaczniesz pisać!</a>
+<?php }
+
+function nastoletnitheme_custom_dashboard_widget() {
+	wp_add_dashboard_widget('dashboard_guidelines_widget', 'Wytyczne dla autorów', 'nastoletnitheme_custom_dashboard_widget_content');
+
+	global $wp_meta_boxes;
+
+	$normal_dashboard = $wp_meta_boxes['dashboard']['normal']['core'];
+	$custom_widget = array( 'dashboard_guidelines_widget' => $normal_dashboard['dashboard_guidelines_widget'] );
+	unset( $normal_dashboard['dashboard_guidelines_widget'] );
+
+	$wp_meta_boxes['dashboard']['normal']['core'] = array_merge( $custom_widget, $normal_dashboard );
+}
+
+add_action( 'wp_dashboard_setup', 'nastoletnitheme_custom_dashboard_widget' );

@@ -61,6 +61,10 @@
 		}
 	}
 
+	.gist {
+		max-width: calc(100vw - 4 * 15px);
+	}
+
 	.rules {
 		counter-reset: rules;
 		list-style: none;

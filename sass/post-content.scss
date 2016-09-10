@@ -19,7 +19,7 @@
 .posts article .content, #tinymce.wp-editor {
 	line-height: 1.5;
 
-	:not(:last-child):not(li) { 
+	:not(:last-child):not(li):not(code) { 
 		margin-bottom: 15px;
 	}
 
@@ -39,6 +39,7 @@
 	}
 
 	code {
+		display: inline-block;
 		border: 1px solid lighten($primaryColor, 50%);
 		border-radius: 3px;
 		padding: 0 3px;

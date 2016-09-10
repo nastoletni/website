@@ -1,11 +1,33 @@
 @import 'variables';
 
+@mixin mobile() {
+	@media (max-width: $mobileWidth) {
+		@content;
+	}
+}
+
+@mixin desktop() {
+	@media (min-width: $mobileWidth) {
+		@content;
+	}
+}
+
+@mixin wide() {
+	@media (min-width: 1921px) {
+		@content;
+	}
+}
+
 %container {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: $containerWidth - 15;
+	max-width: $containerWidth - 30;
 	padding-left: 15px;
 	padding-right: 15px;
+
+	@include wide {
+		max-width: 1600px;
+	}
 }
 
 %hidden {
@@ -18,17 +40,5 @@
 		content: "";
 		display: table;
 		clear: both;
-	}
-}
-
-@mixin mobile() {
-	@media (max-width: $mobileWidth) {
-		@content;
-	}
-}
-
-@mixin desktop() {
-	@media (min-width: $mobileWidth) {
-		@content;
 	}
 }

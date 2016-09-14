@@ -116,6 +116,7 @@
 
 		article {
 			margin-bottom: 30px;
+			border-top: 3px solid #aaa;
 			background: #fff;
 			box-shadow: 0 3px 15px -3px rgba(0, 0, 0, .3);
 
@@ -129,6 +130,44 @@
 
 			&:not(:first-child) header .meta li:last-child {
 				display: none;
+			}
+
+			&.category {
+				// Languages
+
+				&-cpp {
+					border-color: #669ad3;
+				}
+				
+				&-csharp {
+					border-color: #813787;
+				}
+
+				&-java {
+					border-color: #dd4f39;
+				}
+
+				&-php {
+					border-color: #669;
+				}
+
+				&-html-i-css {
+					border-color: #ef8d24;
+				}
+
+				&-javascript {
+					border-color: #f0db4f;
+				}
+
+				&-python {
+					border-color: #346e9e;
+				}
+
+				// Other
+
+				&-meta {
+					border-color: #c13636;
+				}
 			}
 
 			header {

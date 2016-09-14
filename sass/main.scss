@@ -115,10 +115,10 @@
 		}
 
 		article {
+			@extend %shadow;
 			margin-bottom: 30px;
 			border-top: 3px solid #aaa;
 			background: #fff;
-			box-shadow: 0 3px 15px -3px rgba(0, 0, 0, .3);
 
 			@include desktop {
 				flex-basis: 49%;
@@ -267,13 +267,15 @@
 
 	.pagination {
 		margin-bottom: 30px;
+		text-align: center;
 
 		h2 {
 			@extend %hidden;
 		}
 
 		.nav-links {
-			display: flex;
+			@extend %shadow;
+			display: inline-flex;
 			justify-content: center;
 			flex-wrap: wrap;
 

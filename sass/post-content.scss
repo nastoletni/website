@@ -18,6 +18,7 @@
 
 .posts article .content, #tinymce.wp-editor {
 	line-height: 1.5;
+	word-break: break-all;
 
 	:not(:last-child):not(li):not(code) { 
 		margin-bottom: 15px;
@@ -44,7 +45,6 @@
 		border-radius: 3px;
 		padding: 0 3px;
 		background: lighten($primaryColor, 60%);
-		word-break: break-all;
 	}
 
 	.embed-youtube { // Iframely seems to not display YouTube embed responsively

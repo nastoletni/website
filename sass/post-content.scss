@@ -18,7 +18,7 @@
 
 .posts article .content, #tinymce.wp-editor {
 	line-height: 1.5;
-	word-break: break-all;
+	word-break: break-word;
 
 	:not(:last-child):not(li):not(code) { 
 		margin-bottom: 15px;

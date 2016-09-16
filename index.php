@@ -108,8 +108,11 @@
 		</section>
 		<footer class="footer">
 			<div>
-				<span>&copy; nastoletni.pl, 2016</span>
-				<a href="<?php echo admin_url(); ?>">Panel</a>
+				<p>&copy; nastoletni.pl, 2016</p>
+				<p>
+					<a href="https://bitbucket.org/Albert221/nastoletni.pl-theme/issues/new" class="report">Zgłoś błąd</a>
+					<a href="<?php echo admin_url(); ?>">Panel</a>
+				</p>
 			</div>
 		</footer>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Source+Sans+Pro:400,400i,700,700i&amp;subset=latin-ext">

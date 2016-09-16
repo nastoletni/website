@@ -31,5 +31,9 @@
 		@extend %container;
 		display: flex;
 		justify-content: space-between;
+
+		.report {
+			margin-right: 15px;
+		}
 	}
 }

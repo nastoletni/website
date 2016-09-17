@@ -123,7 +123,7 @@
 				flex-basis: 49%;
 			}
 
-			&:first-child {
+			&:first-child, &:nth-child(6) {
 				flex-basis: 100%;
 			}
 

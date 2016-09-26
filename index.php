@@ -103,9 +103,13 @@
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/footer.css">
 		<section class="ad">
 			<div>
-				<a href="http://swkidspoz.eventbrite.com/?aff=nastoletni&discount=NASTOLETNI">
-					<img src="<?php echo get_template_directory_uri(); ?>/imgs/swkids-banner.jpg" alt="Startup Weekend Kids Poznań">
-				</a>
+				<?php if ( get_theme_mod( 'ad_placeholder' ) ): ?>
+					<p class="placeholder">Miejsce na Twoją reklamę</p>
+				<?php else: ?>
+					<a href="<?php echo get_theme_mod( 'ad_href' ); ?>">
+						<img src="<?php echo get_theme_mod( 'ad_image' ); ?>">
+					</a>
+				<?php endif; ?>
 			</div>
 		</section>
 		<footer class="footer">

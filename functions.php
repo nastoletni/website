@@ -29,6 +29,56 @@ function nastoletnitheme_custom_login_logo() { ?>
 
 add_action( 'login_enqueue_scripts', 'nastoletnitheme_custom_login_logo' );
 
+function nastoletnitheme_customize_register( $wp_customize ) {
+	$wp_customize->add_setting( 'ad_placeholder', array(
+		'default' => true
+	) );
+	$wp_customize->add_setting( 'ad_image', array(
+		'default' => ''
+	) );
+	$wp_customize->add_setting( 'ad_href', array(
+		'default' => ''
+	) );
+
+	$wp_customize->add_section( 'ad', array(
+		'title' => 'Reklama',
+		'priority' => 0
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'ad_placeholder_control',
+		array(
+			'label' => 'Placeholder reklamy',
+			'description' => 'Ukrywa reklamę i pokazuje tekst "Miejsce na Twoją reklamę".',
+			'section' => 'ad',
+			'type' => 'checkbox',
+			'settings' => 'ad_placeholder'
+		)
+	) );
+	$wp_customize->add_control( new WP_Customize_Image_Control(
+		$wp_customize,
+		'ad_image_control',
+		array(
+			'label' => 'Obrazek reklamy',
+			'section' => 'ad',
+			'settings' => 'ad_image'
+		)
+	) );
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'ad_href_control',
+		array(
+			'label' => 'Odnośnik reklamy',
+			'section' => 'ad',
+			'type' => 'url',
+			'settings' => 'ad_href'
+		)
+	) );
+}
+
+add_action( 'customize_register', 'nastoletnitheme_customize_register' );
+
 function nastoletnitheme_custom_dashboard_widget_content() { ?>
 	<a href="http://nastoletni.pl/wytyczne-dla-autorow" style="font-weight: bold; font-size: 2em;">Przeczytaj zanim zaczniesz pisać!</a>
 <?php }

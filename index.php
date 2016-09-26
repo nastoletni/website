@@ -116,7 +116,7 @@
 			<div>
 				<p>&copy; nastoletni.pl, 2016</p>
 				<p>
-					<a href="https://bitbucket.org/Albert221/nastoletni.pl-theme/issues/new" class="report">Zgłoś błąd</a>
+					<a href="https://gitlab.com/Albert221/nastoletnitheme/issues/new" class="report">Zgłoś błąd</a>
 					<a href="<?php echo admin_url(); ?>">Panel</a>
 				</p>
 			</div>

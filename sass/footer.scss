@@ -8,6 +8,7 @@
 		@extend %container;
 
 		img {
+			@extend %shadow;
 			width: 100%;
 		}
 

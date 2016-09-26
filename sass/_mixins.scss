@@ -24,6 +24,10 @@
 	max-width: $containerWidth - 30;
 	padding-left: 15px;
 	padding-right: 15px;
+}
+
+%wideContainer {
+	@extend %container;
 
 	@include wide {
 		max-width: 1600px;

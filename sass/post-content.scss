@@ -68,10 +68,6 @@
 		@include desktop {
 			max-width: 1110px; // 1170px - 4 * 15px
 		}
-
-		@include wide {
-			max-width: 1540px; // 1600px - 4 * 15px
-		}
 	}
 
 	.rules {

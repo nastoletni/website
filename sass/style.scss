@@ -76,7 +76,7 @@ img {
 	font-family: Droid Sans Mono, monospace;
 
 	> div {
-		@extend %container;
+		@extend %wideContainer;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

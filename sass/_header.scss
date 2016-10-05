@@ -6,10 +6,13 @@
 	padding: 50px 15px;
 	background: $primaryColor url('imgs/header.jpg') center/cover;
 	color: #fff;
-	text-decoration: none;
 
 	@media (max-width: $mobileWidth) {
 		flex-direction: column-reverse;
+	}
+
+	&:hover {
+		text-decoration: none;
 	}
 
 	h1 {

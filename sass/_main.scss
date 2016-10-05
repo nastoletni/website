@@ -1,6 +1,3 @@
-@import 'mixins';
-@import 'post-content';
-
 .main {
 	> h2 {
 		@extend %hidden;

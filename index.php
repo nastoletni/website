@@ -34,7 +34,6 @@
 				></div>
 			</div>
 		</div>
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/main.css">
 		<main class="main" role="main">
 			<h2>Blog</h2>
 			<nav class="nav">
@@ -100,7 +99,6 @@
 				) );
 			?>
 		</main>
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/footer.css">
 		<section class="ad">
 			<div>
 				<?php if ( get_theme_mod( 'ad_placeholder' ) ): ?>

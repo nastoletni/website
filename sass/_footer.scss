@@ -1,0 +1,14 @@
+.footer {
+	border-top: 1px solid #ccc;
+	padding: 30px 0;
+
+	> div {
+		@extend %wideContainer;
+		display: flex;
+		justify-content: space-between;
+
+		.report {
+			margin-right: 15px;
+		}
+	}
+}

@@ -26,7 +26,7 @@
 					?>
 				</code>
 				<div class="fb-like"
-					 data-href="https://www.facebook.com/NastoletniProgramisciOfficial/"
+					 data-href="https://www.facebook.com/nastoletnipl/"
 					 data-layout="button_count"
 					 data-action="like"
 					 data-show-faces="false"

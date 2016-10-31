@@ -96,3 +96,22 @@ function nastoletnitheme_custom_dashboard_widget() {
 }
 
 add_action( 'wp_dashboard_setup', 'nastoletnitheme_custom_dashboard_widget' );
+
+function nastoletnitheme_create_faq_type() {
+	register_post_type( 'nastoletnitheme_faq', array(
+		'labels' => array(
+			'name' => 'FAQ',
+			'singular_name' => 'FAQ'
+		),
+		'public' => true,
+		'rewrite' => array('slug' => 'faq'),
+		'menu_icon' => 'dashicons-editor-help',
+		'supports' => array(
+			'title',
+			'editor',
+			'custom-fields'
+		)
+	) );
+}
+
+add_action( 'init', 'nastoletnitheme_create_faq_type' );

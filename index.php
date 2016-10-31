@@ -48,7 +48,23 @@
 				?>
 			</nav>
 			<div class="posts">
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php if ( is_category() ) :
+					$faq = new WP_Query( array(
+						'post_type' => 'nastoletnitheme_faq',
+						'meta_key' => 'category',
+						'meta_value' => get_queried_object()->slug
+					) );
+
+					while ($faq->have_posts()) : $faq->the_post(); ?>
+						<section class="faq">
+							<a href="<?php echo get_permalink(); ?>">
+								<h2><?php echo the_title(); ?></h2>
+								<span>FAQ</span>
+							</a>
+						</section>
+					<?php endwhile;
+				endif;
+				while ( have_posts() ) : the_post(); ?>
 					<article <?php post_class(); ?>>
 						<header>
 							<h3>
@@ -58,7 +74,7 @@
 									<a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
 								<?php endif; ?>
 							</h3>
-							<?php if ( get_post_type() != 'page' ) : ?>
+							<?php if ( ! in_array(get_post_type(), array( 'page', 'nastoletnitheme_faq') ) ) : ?>
 								<ul class="meta">
 									<li>w <?php the_category(', '); ?></li>
 									<li>przez <?php the_author_posts_link(); ?></li>
@@ -72,7 +88,7 @@
 						<div class="content">
 							<?php the_content('Czytaj dalej &rarr;'); ?>
 						</div>
-						<?php if ( is_single() ) : ?>
+						<?php if ( is_single() && get_post_type() == 'post' ) : ?>
 							<section class="bio">
 								<?php echo get_avatar( get_the_author_meta( 'user_email' ), 100 ); ?>
 								<h3><?php the_author(); ?></h3>

@@ -111,6 +111,30 @@
 			margin-top: 30px;
 		}
 
+		.faq {
+			flex-basis: 100%;
+			margin-bottom: 15px;
+
+			a {
+				@extend %shadow;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-size: 40px;
+				text-decoration: none;
+
+				> * {
+					padding: 15px 30px;
+
+					&:first-child {
+						flex: 1;
+						background: $primaryColor;
+						color: #fff;
+					}
+				}
+			}
+		}
+
 		article {
 			@extend %shadow;
 			margin-bottom: 30px;
@@ -120,11 +144,11 @@
 				flex-basis: 49%;
 			}
 
-			&:first-child, &:nth-child(6) {
+			&:first-of-type, &:nth-of-type(6) {
 				flex-basis: 100%;
 			}
 
-			&:not(:first-child) header .meta li:last-child {
+			&:not(:first-of-type) header .meta li:last-child {
 				display: none;
 			}
 

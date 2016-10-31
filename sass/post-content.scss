@@ -70,6 +70,18 @@
 		}
 	}
 
+	.align {
+		&right {
+			float: right;
+			margin: 10px 0 10px 10px;
+		}
+
+		&left {
+			float: left;
+			margin: 10px 10px 10px 0;
+		}
+	}
+
 	.rules {
 		counter-reset: rules;
 		list-style: none;

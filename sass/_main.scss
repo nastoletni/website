@@ -120,8 +120,12 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				font-size: 40px;
+				font-size: 16px;
 				text-decoration: none;
+
+				@include desktop() {
+					font-size: 40px;
+				}
 
 				> * {
 					padding: 15px 30px;

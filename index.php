@@ -128,11 +128,14 @@
 		</section>
 		<footer class="footer">
 			<div>
-				<p>&copy; nastoletni.pl, 2016</p>
-				<p>
-					<a href="https://gitlab.com/Albert221/nastoletnitheme/issues/new" class="report">Zgłoś błąd</a>
-					<a href="<?php echo admin_url(); ?>">Panel</a>
-				</p>
+				<p>&copy; nastoletni.pl, <?php echo date('Y'); ?></p>
+				<ul>
+					<li><a href="https://www.facebook.com/nastoletnipl">Fanpage</a></li>
+					<li><a href="https://www.facebook.com/groups/NastoletniProgramisci">Grupa</a></li>
+					<li><a href="https://m.me/albert.wolszon">Kontakt</a></li>
+					<li><a href="https://gitlab.com/Albert221/nastoletnitheme/issues" title="Musisz posiadać konto na GitLabie">Zgłoś błąd</a></li>
+					<li><a href="<?php echo admin_url(); ?>">Panel</a></li>
+				</ul>
 			</div>
 		</footer>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Source+Sans+Pro:400,400i,700,700i&amp;subset=latin-ext">

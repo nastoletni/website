@@ -141,6 +141,8 @@
 
 		article {
 			@extend %shadow;
+			display: flex;
+			flex-direction: column;
 			margin-bottom: 30px;
 			background: #fff;
 
@@ -235,13 +237,16 @@
 			.content {
 				// @see post-content.scss
 				@extend %clearfix;
-				padding: 15px;
+				flex: 1;
+				position: relative;
+				padding: 15px 15px 74px; // 2*15px + 44px (height of read more button)
 				text-align: justify;
 
 				.more-link {
+					position: absolute;
+					right: 15px;
+					bottom: 15px;
 					display: inline-block;
-					float: right;
-					margin-top: 15px;
 					padding: 10px 15px;
 					background: $primaryColor;
 					color: #fff;

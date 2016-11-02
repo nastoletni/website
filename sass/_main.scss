@@ -242,6 +242,12 @@
 				padding: 15px 15px 74px; // 2*15px + 44px (height of read more button)
 				text-align: justify;
 
+				@at-root {
+					.single & {
+						padding-bottom: 15px;
+					}
+				}
+
 				.more-link {
 					position: absolute;
 					right: 15px;

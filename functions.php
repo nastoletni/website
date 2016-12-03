@@ -16,6 +16,13 @@ function nastoletnitheme_setup() {
 
 add_action( 'after_setup_theme', 'nastoletnitheme_setup' );
 
+function nastoletnitheme_enqueue_script() {
+	wp_enqueue_script( 'ga', get_template_directory_uri() . '/scripts/ga.js' );
+}
+
+add_action( 'wp_enqueue_scripts', 'nastoletnitheme_enqueue_script' );
+add_action( 'login_enqueue_scripts', 'nastoletnitheme_enqueue_script' );
+
 function nastoletnitheme_custom_login_logo() { ?>
 	<style>
 		#login h1 a, .login h1 a {

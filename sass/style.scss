@@ -3,39 +3,29 @@ Theme Name: nastoletni.pl Theme
 Author: Albert221
 Author URI: http://albert221.net
 Text Domain: nastoletnitheme
+Version: 2.0.0
 */
 
-@import 'mixins';
-@import 'header';
-@import 'codeline';
-@import 'main';
-@import 'post-content';
-@import 'ad';
-@import 'footer';
+@import '../node_modules/nastoletni-sass/src/style';
 
-*, :before, :after {
-	box-sizing: inherit;
-	margin: 0;
-	padding: 0;
-	font-family: inherit;
+.comments {
+    padding: 15px;
+
+    h3 {
+        @extend %hidden;
+    }
 }
 
-html {
-	box-sizing: border-box;
-	background: #f3f3f3;
-	color: #333;
-	font: 16px Source Sans Pro, Arial, sans-serif;
-}
+.type-post {
+    .panel-content {
+        position: relative;
+        // 15px (margin bottom for elements) + 44px (button height) + 15px (padding bottom) = 74px
+        padding-bottom: 74px;
 
-a {
-	color: $primaryColor;
-	text-decoration: none;
-
-	&:hover {
-		text-decoration: underline;
-	}
-}
-
-img {
-	max-width: 100%;
+        .more-link {
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+        }
+    }
 }

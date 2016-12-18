@@ -1,8 +1,11 @@
 {
-	"devDependencies": {
-		"gulp": "*",
-		"gulp-sass": "*",
-		"gulp-autoprefixer": "*",
-		"gulp-csso": "*"
-	}
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-sass": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-csso": "*"
+  },
+  "dependencies": {
+    "nastoletni-sass": "^1.0.0"
+  }
 }

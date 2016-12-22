@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width">
-		<!--<link rel="stylesheet" href="/nastoletni-sass/dist/nastoletni.min.css">-->
 		<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i&amp;subset=latin-ext">
 		<style>a[href="http://konkurs.nastoletni.pl"] { background: #ef8d24; }</style>

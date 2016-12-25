@@ -62,7 +62,7 @@
 						<?php endif; ?>
 					</header>
 					<?php if ( has_post_thumbnail() ) : ?>
-						<a href="<?php echo get_permalink(); ?>" class="image"><img src="<?php the_post_thumbnail_url(); ?>"></a>
+						<a href="<?php echo get_permalink(); ?>" class="panel-image"><img src="<?php the_post_thumbnail_url(); ?>"></a>
 					<?php endif; ?>
 					<div class="panel-content">
 						<?php the_content('Czytaj dalej &rarr;'); ?>

@@ -16,8 +16,6 @@
 		</header>
 		<nav class="nav">
 			<h3>Kategorie</h3>
-			<input type="checkbox" id="toggle-navigation" autocomplete="off">
-			<label for="toggle-navigation">Rozwiń nawigację</label>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'primary',

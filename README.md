@@ -1,4 +1,4 @@
-# nastoletni.pl WordPress theme
+# nastoletni.pl theme
 
 ## Installation
 

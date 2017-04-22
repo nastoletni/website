@@ -25,4 +25,4 @@
 			?>
 		</nav>
 		<div class="main main-container">
-			<main role="main">
+			<main class="main-container--element" role="main">

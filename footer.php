@@ -1,4 +1,8 @@
-		</main>
+			</main>
+			<div class="main-container--sidebar">
+				<?php get_sidebar(); ?>
+			</div>
+		</div>
 		<footer class="footer">
 			<div>
 				<p>© nastoletni.pl, <?php echo date( 'Y' ); ?></p>

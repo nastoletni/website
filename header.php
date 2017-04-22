@@ -23,4 +23,5 @@
 				) );
 			?>
 		</nav>
-		<main class="main" role="main">
+		<div class="main main-container">
+			<main role="main">

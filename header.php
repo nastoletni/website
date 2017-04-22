@@ -9,7 +9,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<header class="hero-header-a" role="banner">
+		<header class="hero-header-a">
 			<a href="<?php echo home_url(); ?>">
 				<h1><?php echo str_replace( ' ', '<br>', get_bloginfo( 'name' ) ); ?></h1>
 				<img src="<?php echo get_template_directory_uri(); ?>/imgs/logo.svg" alt="Logo Nastoletnich Programistów">
@@ -25,4 +25,4 @@
 			?>
 		</nav>
 		<div class="main main-container">
-			<main class="main-container--element" role="main">
+			<main class="main-container--element">

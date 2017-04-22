@@ -103,3 +103,17 @@ function nastoletnitheme_custom_dashboard_widget() {
 }
 
 add_action( 'wp_dashboard_setup', 'nastoletnitheme_custom_dashboard_widget' );
+
+function nastoletnitheme_add_utm( $url, $utm_source, $utm_medium = '', $utm_content = '' ) {
+	$queries = 'utm_source=' . $utm_source;
+
+	if ( !empty( $utm_medium ) ) {
+		$queries .= '&utm_medium=' . $utm_medium;
+	}
+
+	if ( !empty( $utm_content ) ) {
+		$queries .= '&utm_content=' . $utm_content;
+	}
+
+	return strpos( $url, '?' ) !== false ? $url . '&' . $queries : $url . '?' . $queries;
+}

@@ -5,12 +5,16 @@
         </header>
         <div class="panel-content">
             <ul>
-    <?php
-    $categories = get_categories();
+<?php
+$categories = get_categories();
 
-    foreach ( $categories as $category ) : ?>
-                <li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name; ?></a></li>
-    <?php endforeach; ?>
+foreach ( $categories as $category ) :
+    echo sprintf(
+        '<li><a href="%s">%s</a></li>',
+        esc_url( nastoletnitheme_add_utm( get_category_link( $category->term_id ), 'website', 'sidebar' ) ),
+        $category->name
+    );
+endforeach; ?>
             </ul>
         </div>
     </section>

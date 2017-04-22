@@ -10,7 +10,7 @@
         <ul class="panel-header-meta">
             <li>w <?php the_category( ', ' ); ?></li>
             <li>przez <?php the_author_posts_link(); ?></li>
-            <li><time datetime="<?php the_time('Y-m-d\TH:i:s'); ?>">dnia <?php the_time( get_option( 'date_format' ) ); ?>)</time></li>
+            <li><time datetime="<?php the_time('Y-m-d\TH:i:s'); ?>">dnia <?php the_time( get_option( 'date_format' ) ); ?></time></li>
         </ul>
     </header>
 <?php if ( has_post_thumbnail() ) : ?>
